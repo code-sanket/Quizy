@@ -66,12 +66,27 @@
 
         <Button
             android:id="@+id/btnLogIn"
+            android:elevation="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/btn_primary"
             android:text="Log In"
             android:textColor="@color/colorPrimaryButton" />
+
+        <Button
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/btn_google"
+            android:text="Sign in with google"
+            android:elevation="12dp"
+            android:textAlignment="center"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            app:cornerRadius="20dp" />
 
         <TextView
             android:id="@+id/btnSignUp"

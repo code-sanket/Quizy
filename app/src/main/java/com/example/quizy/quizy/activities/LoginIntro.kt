@@ -18,7 +18,7 @@ class LoginIntro : AppCompatActivity() {
         if (auth.currentUser != null){  // yha pr check hoga ki pehle se admi login ha ya ni //
 
             Toast.makeText(this , "User is already logged in" , Toast.LENGTH_SHORT).show()
-            redirect("MAIN");
+            redirect("MAIN")
         }
 
         binding.btnLetsGo.setOnClickListener {

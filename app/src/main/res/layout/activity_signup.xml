@@ -89,7 +89,6 @@
             android:id="@+id/btnLogIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:textColor="@color/colorPrimaryTextOpaque"
             android:layout_marginTop="25dp"
             android:textAlignment="center"

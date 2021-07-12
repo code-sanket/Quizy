@@ -19,6 +19,7 @@
 
         <ImageView
             android:layout_width="80dp"
+            android:id="@+id/propic"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/man" />

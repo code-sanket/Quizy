@@ -1,13 +1,11 @@
 package com.example.quizy.quizy.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.quizy.R
 import com.example.quizy.databinding.ActivityQuestionBinding
 import com.example.quizy.quizy.adapters.Options_Adapter
 import com.example.quizy.quizy.models.Questions
@@ -50,13 +48,14 @@ class QuestionActivity : AppCompatActivity() {
             val json = Gson().toJson(quizzes!![0])
             intent.putExtra("QUIZ" , json)
             startActivity(intent)
+            finish()
 
         }
     }
 
     private fun setUpFirestore() {
         val firestore = FirebaseFirestore.getInstance()
-        var date = intent.getStringExtra("DATE")
+        val date = intent.getStringExtra("DATE")
         if(date != null){
 
             firestore.collection("quizzes").whereEqualTo("title" , date)

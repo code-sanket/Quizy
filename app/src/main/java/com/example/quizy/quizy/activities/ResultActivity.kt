@@ -1,15 +1,12 @@
 package com.example.quizy.quizy.activities
 
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
-import com.example.quizy.R
-import com.example.quizy.databinding.ActivityQuestionBinding
+import androidx.appcompat.app.AppCompatActivity
 import com.example.quizy.databinding.ActivityResultBinding
 import com.example.quizy.quizy.models.Quiz
 import com.google.gson.Gson
-import java.lang.StringBuilder
 
 class ResultActivity : AppCompatActivity() {
     lateinit var binding: ActivityResultBinding
@@ -38,7 +35,7 @@ class ResultActivity : AppCompatActivity() {
             builder.append("<font color='#009688'>Answer: ${question.answer}</font><br/><br/>")
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            binding.txtAnswer.text = Html.fromHtml(builder.toString(), Html.FROM_HTML_MODE_COMPACT);
+            binding.txtAnswer.text = Html.fromHtml(builder.toString(), Html.FROM_HTML_MODE_COMPACT)
         } else {
             binding.txtAnswer.text = Html.fromHtml(builder.toString());
         }
